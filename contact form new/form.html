@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="myform.css">
+    <style>
+        .footer {
+            background: linear-gradient(135deg, #000000, #001f2d, #004c5b, #001f2d, #000000);
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+    
+            /* Animation */
+            opacity: 0; /* Initially hidden */
+            transform: scale(0.95); /* Slightly smaller scale initially */
+            animation: fadeInScale 2s cubic-bezier(0.43, 2, 0.62, 2) 2.5s forwards; /* Delayed fade-in with scale animation */
+        }
+    
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in touch</h2> 
+            </div>
+            <input type="hidden" name="access_key" value="cda54c8e-db02-4b8c-a660-ea4c8dcdc160">
+            <input type="text" name="name" placeholder="Your name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit <img src="assets/arrow_icon.png" alt=""></button>
+        </form>
+        <div class="contact-right">
+            <img src="assets/pngwing.co (1).png" alt="">
+        </div>
+         <div class="background-video">
+            <video autoplay muted loop>
+                <source src="assets/dark 1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Developed by Sameera &copy; 2024</p>
+    </div>
+
+</body>
+</html>
